@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
 
 function App() {
   const dateN = new Date().toLocaleDateString();
@@ -25,8 +26,10 @@ function App() {
   const addNewElement = () => {
     setShowState(true);
     localStorage.setItem("showState", true);
-
+    
+    
     let myDiv = document.getElementsByClassName("kapsayiciNotDivi");
+    myDiv[0].classList.remove("animate__hinge");
     myDiv[0].classList.remove("noshowcss");
 
     localStorage.setItem("myNotes", notetext);
@@ -37,11 +40,18 @@ function App() {
 
   const deleteNote = () => {
     setNoteText("");
+
     let myDiv = document.getElementsByClassName("kapsayiciNotDivi");
-    myDiv[0].classList.add("noshowcss");
+    myDiv[0].classList.add("animate__hinge");
+    
+    setTimeout(function(){
+      myDiv[0].classList.add("noshowcss");
+  }, 2000);
+
     localStorage.clear();
     let myTextarea = document.getElementById("notearea");
     myTextarea.value = "";
+
     setDate(new Date().toLocaleDateString());
     setTime(new Date().toLocaleTimeString());
   };
@@ -78,7 +88,7 @@ function App() {
             <p>{date} {time}</p>
           </div>
           <div>
-            <Button className="btn btn-danger" onClick={() => deleteNote()}>
+            <Button className="btn btn-danger animate__animated" onClick={() => deleteNote()}>
               Delete
             </Button>
           </div>
