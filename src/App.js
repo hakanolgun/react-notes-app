@@ -6,13 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   const dateN = new Date().toLocaleDateString();
   const timeN = new Date().toLocaleTimeString();
-
   const [date, setDate] = useState(dateN);
   const [time, setTime] = useState(timeN);
-
-  // setTime({
-  //   time = new Date().toLocaleTimeString()
-  // });
 
   //Websayfası ilk açıldığında, Not yazma kısmı, eğer local storagede varsa gösterilsin yoksa gösterilmesin
   const [showState, setShowState] = useState(() => {
