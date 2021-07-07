@@ -65,7 +65,7 @@ function App() {
       <div className="titleP">
         <h1>React Notes App</h1>
         <Button className="btn btn-primary" onClick={() => addNewElement()}>
-          Not Ekle
+          Add Note
         </Button>
       </div>
       <div
@@ -88,7 +88,7 @@ function App() {
           id="notearea"
           cols="30"
           rows="10"
-          placeholder="Buraya notunuzu yazınız..."
+          placeholder="Please write your notes here..."
           onChange={handleInput}
           value={localStorage.myNotes === "" ? notetext : localStorage.myNotes}
         ></textarea>
