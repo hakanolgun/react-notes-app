@@ -37,7 +37,7 @@ function App() {
     localStorage.setItem("myNotes", notetext);
 
     setDate(new Date().toLocaleDateString());
-    setTime(new Date().toLocaleTimeString())
+    setTime(new Date().toLocaleTimeString());
   };
 
   const deleteNote = () => {
@@ -48,7 +48,7 @@ function App() {
     let myTextarea = document.getElementById("notearea");
     myTextarea.value = "";
     setDate(new Date().toLocaleDateString());
-    setTime(new Date().toLocaleTimeString())
+    setTime(new Date().toLocaleTimeString());
   };
 
   //textarea'ya bir şeyler yazıldığında bunu yakala
@@ -56,7 +56,7 @@ function App() {
     setNoteText(e.target.value);
     localStorage.setItem("myNotes", e.target.value);
     setDate(new Date().toLocaleDateString());
-    setTime(new Date().toLocaleTimeString())
+    setTime(new Date().toLocaleTimeString());
   };
 
   useEffect(() => {

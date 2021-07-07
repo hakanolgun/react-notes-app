@@ -2,29 +2,34 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: yellow;
+  background: #95CC82;
+  background: -webkit-linear-gradient(top left, #95CC82, #B9A82C);
+  background: -moz-linear-gradient(top left, #95CC82, #B9A82C);
+  background: linear-gradient(to bottom right, #95CC82, #B9A82C);
   height: 100vh;
   width: 100vw;
-  
 }
-.titleP{
+.titleP {
   width: 300px;
   align-self: center;
   margin: 2rem 0rem 5rem 0rem;
   padding: 1rem;
 }
-.kapsayiciNotDivi{
+.kapsayiciNotDivi {
   width: 300px;
   height: 400px;
-  border: 2px solid blue;
+  border: 2px solid #4286f4;
   background-color: azure;
   justify-self: center;
   align-self: center;
   display: flex;
   flex-direction: column;
 }
-.tarihparagrafi{
-  background-color: blue;
+.tarihparagrafi {
+  background: #373B44;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   margin: 0;
   padding: 0.3rem 0.7rem;
   color: white;
@@ -33,15 +38,15 @@
   justify-content: space-between;
   align-items: center;
 }
-.tarihparagrafi > div:first-child{
+.tarihparagrafi > div:first-child {
   display: flex;
   align-items: center;
 }
-.tarihparagrafi > div:first-child > p{
+.tarihparagrafi > div:first-child > p {
   margin: 0 auto;
 }
 
-#notearea{
+#notearea {
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -51,6 +56,6 @@
   width: 100%;
   resize: none;
 }
-.noshowcss{
+.noshowcss {
   display: none;
 }
